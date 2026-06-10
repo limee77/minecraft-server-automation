@@ -1,5 +1,3 @@
-# minecraft-server-automation
-
 # Minecraft Server Automation
 
 ## Background
