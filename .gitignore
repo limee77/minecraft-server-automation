@@ -9,3 +9,14 @@ working-instance.json
 
 # macOS
 .DS_Store
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# macOS
+.DS_Store
+
+# AWS keys
+*.pem
+

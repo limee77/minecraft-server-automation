@@ -1,0 +1,155 @@
+{
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+        {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+                "AttachTime": "2026-05-18T20:25:27+00:00",
+                "DeleteOnTermination": true,
+                "Status": "attached",
+                "VolumeId": "vol-0de8dbe1eb0c976b5",
+                "EbsCardIndex": 0
+            }
+        }
+    ],
+    "ClientToken": "3493c5a7-739f-4db6-b67b-4260f58b9c0e",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "NetworkInterfaces": [
+        {
+            "Association": {
+                "IpOwnerId": "amazon",
+                "PublicDnsName": "ec2-34-230-52-67.compute-1.amazonaws.com",
+                "PublicIp": "34.230.52.67"
+            },
+            "Attachment": {
+                "AttachTime": "2026-05-18T20:25:26+00:00",
+                "AttachmentId": "eni-attach-0bd75c66b2bb08950",
+                "DeleteOnTermination": true,
+                "DeviceIndex": 0,
+                "Status": "attached",
+                "NetworkCardIndex": 0
+            },
+            "Description": "",
+            "Groups": [
+                {
+                    "GroupId": "sg-0173353c82f5b5da8",
+                    "GroupName": "Minecraft Security Group"
+                }
+            ],
+            "Ipv6Addresses": [],
+            "MacAddress": "0e:59:5f:73:25:0d",
+            "NetworkInterfaceId": "eni-0e43b0ed5b10e7288",
+            "OwnerId": "477154473863",
+            "PrivateDnsName": "ip-172-31-33-157.ec2.internal",
+            "PrivateIpAddress": "172.31.33.157",
+            "PrivateIpAddresses": [
+                {
+                    "Association": {
+                        "IpOwnerId": "amazon",
+                        "PublicDnsName": "ec2-34-230-52-67.compute-1.amazonaws.com",
+                        "PublicIp": "34.230.52.67"
+                    },
+                    "Primary": true,
+                    "PrivateDnsName": "ip-172-31-33-157.ec2.internal",
+                    "PrivateIpAddress": "172.31.33.157"
+                }
+            ],
+            "SourceDestCheck": true,
+            "Status": "in-use",
+            "SubnetId": "subnet-005aa4c6df4acab28",
+            "VpcId": "vpc-09a5a255d499241c6",
+            "InterfaceType": "interface",
+            "Operator": {
+                "Managed": false
+            }
+        }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+        {
+            "GroupId": "sg-0173353c82f5b5da8",
+            "GroupName": "Minecraft Security Group"
+        }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+        {
+            "Key": "Name",
+            "Value": "My-Minecraft-Server"
+        }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+        "CoreCount": 1,
+        "ThreadsPerCore": 1
+    },
+    "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+        "Configured": false
+    },
+    "MetadataOptions": {
+        "State": "applied",
+        "HttpTokens": "required",
+        "HttpPutResponseHopLimit": 2,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+        "Enabled": false
+    },
+    "BootMode": "uefi-preferred",
+    "PlatformDetails": "Linux/UNIX",
+    "UsageOperation": "RunInstances",
+    "UsageOperationUpdateTime": "2026-05-18T20:25:26+00:00",
+    "PrivateDnsNameOptions": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": true,
+        "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+        "AutoRecovery": "default",
+        "RebootMigration": "default"
+    },
+    "CurrentInstanceBootMode": "legacy-bios",
+    "NetworkPerformanceOptions": {
+        "BandwidthWeighting": "default"
+    },
+    "Operator": {
+        "Managed": false,
+        "HiddenByDefault": false
+    },
+    "SecondaryInterfaces": [],
+    "InstanceId": "i-06d3dd70773e7b221",
+    "ImageId": "ami-0236922087fa98b6e",
+    "State": {
+        "Code": 16,
+        "Name": "running"
+    },
+    "PrivateDnsName": "ip-172-31-33-157.ec2.internal",
+    "PublicDnsName": "ec2-34-230-52-67.compute-1.amazonaws.com",
+    "StateTransitionReason": "",
+    "KeyName": "MyLinuxServer",
+    "AmiLaunchIndex": 0,
+    "ProductCodes": [],
+    "InstanceType": "t2.micro",
+    "LaunchTime": "2026-06-10T21:16:14+00:00",
+    "Placement": {
+        "AvailabilityZoneId": "use1-az6",
+        "GroupName": "",
+        "Tenancy": "default",
+        "AvailabilityZone": "us-east-1d"
+    },
+    "Monitoring": {
+        "State": "disabled"
+    },
+    "SubnetId": "subnet-005aa4c6df4acab28",
+    "VpcId": "vpc-09a5a255d499241c6",
+    "PrivateIpAddress": "172.31.33.157",
+    "PublicIpAddress": "34.230.52.67"
+}

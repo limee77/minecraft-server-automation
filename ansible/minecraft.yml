@@ -1,0 +1,76 @@
+---
+- name: Configure Minecraft Server
+  hosts: minecraft
+  become: true
+
+  tasks:
+
+    - name: Install Java 21
+      dnf:
+        name: java-21-amazon-corretto
+        state: present
+
+    - name: Create minecraft user
+      user:
+        name: minecraft
+        system: yes
+        create_home: yes
+
+    - name: Create minecraft directory
+      file:
+        path: /opt/minecraft
+        state: directory
+        owner: minecraft
+        group: minecraft
+        mode: '0755'
+
+    - name: Download Minecraft server
+      get_url:
+        url: https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
+        dest: /opt/minecraft/server.jar
+        owner: minecraft
+        group: minecraft
+        mode: '0644'
+
+    - name: Accept EULA
+      copy:
+        dest: /opt/minecraft/eula.txt
+        content: "eula=true\n"
+        owner: minecraft
+        group: minecraft
+
+    - name: Create Minecraft systemd service
+      copy:
+        dest: /etc/systemd/system/minecraft.service
+        content: |
+          [Unit]
+          Description=Minecraft Server
+          After=network.target
+
+          [Service]
+          User=minecraft
+          Group=minecraft
+          WorkingDirectory=/opt/minecraft
+
+          ExecStart=/usr/bin/java -Xms1G -Xmx1G -jar server.jar nogui
+          ExecStop=/bin/kill -SIGINT $MAINPID
+
+          Restart=always
+          RestartSec=10
+
+          [Install]
+          WantedBy=multi-user.target
+
+    - name: Reload systemd
+      systemd:
+        daemon_reload: true
+
+    - name: Enable Minecraft service
+      systemd:
+        name: minecraft
+        enabled: true
+
+    - name: Start Minecraft service
+      systemd:
+        name: minecraft
+        state: started
