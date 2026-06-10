@@ -1,4 +1,6 @@
 # Minecraft Server Automation with Terraform and Ansible
+# Liam Gold
+# CS312
 
 ## Overview
 
