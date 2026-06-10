@@ -2,14 +2,24 @@
 
 ## Background
 
+This project automates the provisioning and configuration of a Minecraft server on AWS using Infrastructure as Code (IaC) tools.
+
 ## Requirements
+
+## Repository Structure
 
 ## Architecture
 
-## Deployment Steps
+## Deployment Pipeline
+
+## Provisioning Infrastructure
+
+## Configuring the Minecraft Server
 
 ## Verification
 
-## Cleanup
+## Connecting to the Server
+
+## Destroying Resources
 
 ## References
